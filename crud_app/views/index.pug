@@ -1,41 +1,34 @@
 //- Include header
 include include/_header
-     <!-- Main Site -->
-      <main id="site-main">
-        <div class="container">
-            <div href="box-nav d-flex justify-between">
-                <a href="/add-user" class="border-shadow">
-                    <span class="text-gradient">New User <i class="fa-solid fa-user"></i></span>
-                </a>
-            </div>
 
-            <!-- form handling-->
-            <form action="/" method="POST">
-                <table class="table">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>ID</th>
-                            <th>Lastname</th>
-                            <th>Firstname</th>
-                            <th>Date of Birth</th>
-                            <th>Address 1</th>
-                            <th>Address 2</th>
-                            <th>City</th>
-                            <th>Postal code</th>
-                            <th>Country</th>
-                            <th>Phone number</th>
-                            <th>Email</th>
-                            <th>User notes</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
-            </form>
-        </div>
-      </main>
-    <!-- /Main Site -->
+//- Main Site
+main#site-main
+  .container
+    .box-nav.d-flex.justify-between
+      a.border-shadow(href="/add-user")
+        span.text-gradient New User 
+        i.fa-solid.fa-user
+
+    //- Form Handling
+    form(action="/" method="POST")
+      table.table
+        thead.thead-dark
+          tr
+            th ID
+            th Lastname
+            th Firstname
+            th Date of Birth
+            th Address 1
+            th Address 2
+            th City
+            th Postal code
+            th Country
+            th Phone number
+            th Email
+            th User notes
+            th Action
+        tbody
+          include include/_show
 
 //- Include footer
 include include/footer
