@@ -1,5 +1,5 @@
 //- Form Handling
-form#add_user(method="POST")
+form#update_user(method="POST")
   .new_user
     //- ID (Hidden Field)
     .form-group
@@ -60,6 +60,10 @@ form#add_user(method="POST")
       label.text-light(for="userNotes") User Notes
       textarea#userNotes(name="userNotes" placeholder="Enter any notes about the user")
 
-    //- Submit Button
+    //- Edit Button
     .form-group
-      button.btn.text-dark.update(type="submit") Add
+      button.btn.text-dark.update(type="submit") Edit
+
+    //- Delete Button
+    .form-group
+      button.btn.text-dark.update(type="submit") Delete

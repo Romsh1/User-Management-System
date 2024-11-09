@@ -192,3 +192,18 @@ table {
     background-color: var(--dark);
     color: var(--border);
 }
+
+/* .form-group {
+    display: flex;
+    justify-content: space-between; 
+    gap: 1em; 
+}
+
+button.btn.text-dark.update {
+    flex: 1; 
+    padding: 0.6em 1em;
+}
+
+button.btn.text-dark.update[type="submit"]:nth-of-type(2) {
+    flex: 1; 
+} */
