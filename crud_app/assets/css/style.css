@@ -115,3 +115,80 @@ table {
     color: #fff;
     background-color: var(--dark);border-color: #32383e;
 }
+
+/* Responsive */
+@media only screen and (max-width: 1024px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr { border: 1px solid var(--border);}
+
+    td {
+        border: none;
+        position: relative;
+    }
+}
+
+/* Add and update user styling */
+.form-title {
+    margin-top: 2em;
+}
+
+.form-title > h2{
+    padding: .5em 0;
+}
+
+.new_user {
+    max-width: 786px;
+    margin: auto;
+}
+
+#update_user .form-group,
+#add_user .form-group {
+    margin: .4em 0;
+}
+
+#update_user .form-group input[type="text"],
+#add_user .form-group input[type="text"],
+#update_user .form-group input[type="date"],
+#add_user .form-group input[type="date"],
+#update_user .form-group input[type="tel"],
+#add_user .form-group input[type="tel"],
+#update_user .form-group input[type="email"],
+#add_user .form-group input[type="email"],
+#update_user .form-group textarea,
+#add_user .form-group textarea{
+    width: 100%;
+    padding: .6em 1em;
+    margin: .5em 0;
+    border: 1px solid var(--border);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    border-radius: 2em;
+}
+
+#update_user .form-group .btn,
+#add_user .form-group .btn {
+    width: 100%;
+    padding: .9em 1em;
+    background-color: #16db93;
+    border: none;
+    font-size: 1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    border-radius: .2em;
+    margin: .5em 0;
+}
+
+#update_user .form-group .btn:hover,
+#add_user .form-group .btn:hover {
+    background-color: var(--dark);
+    color: var(--border);
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <body>
+    <!-- Header -->
+     <header id="header">
+        <nav>
+            <div class="container">
+                <div class="text-center">
+                    <a href="/" class="nav-brand text-dark">User Management System</a>
+                </div>
+            </div>
+        </nav>
+     </header>
+     <!-- /Header -->
+
+     <!-- Main Site -->
+      <main id="site-main">
+        <div class="container">
+            <div href="box-nav d-flex justify-between">
+                <div class="filter">
+                    <a href="/"><i class="fas fa-angle-double-left"></i>View All Users</a>
+                </div>
+            </div>
+            <div class="form-title text-center">
+                <h2 class="text-dark">New User</h2>
+                <span class="text-light">Use the below form to add a new user</span>
+            </div>
+
+            <!-- form handling-->
+            <form method="POST" id="update_user">
+                <div class="new_user">
+                    <!-- ID (Hidden Field) -->
+                    <div class="form-group">
+                        <input type="hidden" name="id" value="">
+                    </div>
+
+                    <!-- Lastname -->
+                    <div class="form-group">
+                        <label for="lastname" class="text-light">Lastname</label>
+                        <input type="text" name="lastname" id="lastname" placeholder="Enter Lastname">
+                    </div>
+
+                    <!-- Firstname -->
+                    <div class="form-group">
+                        <label for="firstname" class="text-light">Firstname</label>
+                        <input type="text" name="firstname" id="firstname" placeholder="Enter Firstname">
+                    </div>
+
+                    <!-- Date of Birth -->
+                    <div class="form-group">
+                        <label for="dateOfBirth" class="text-light">Date of Birth</label>
+                        <input type="date" name="dateOfBirth" id="dateOfBirth">
+                    </div>
+
+                    <!-- Address 1 -->
+                    <div class="form-group">
+                        <label for="address1" class="text-light">Address 1</label>
+                        <input type="text" name="address1" id="address1" placeholder="Enter Address Line 1">
+                    </div>
+
+                    <!-- Address 2 -->
+                    <div class="form-group">
+                        <label for="address2" class="text-light">Address 2</label>
+                        <input type="text" name="address2" id="address2" placeholder="Enter Address Line 2">
+                    </div>
+
+                    <!-- City -->
+                    <div class="form-group">
+                        <label for="city" class="text-light">City</label>
+                        <input type="text" name="city" id="city" placeholder="Enter City">
+                    </div>
+
+                    <!-- Postal Code -->
+                    <div class="form-group">
+                        <label for="postalCode" class="text-light">Postal Code</label>
+                        <input type="text" name="postalCode" id="postalCode" placeholder="Enter Postal Code">
+                    </div>
+
+                    <!-- Country -->
+                    <div class="form-group">
+                        <label for="country" class="text-light">Country</label>
+                        <input type="text" name="country" id="country" placeholder="Enter Country">
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="form-group">
+                        <label for="phoneNumber" class="text-light">Phone Number</label>
+                        <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Enter Phone Number">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email" class="text-light">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter Email">
+                    </div>
+
+                    <!-- User Notes -->
+                    <div class="form-group">
+                        <label for="userNotes" class="text-light">User Notes</label>
+                        <textarea name="userNotes" id="userNotes" placeholder="Enter any notes about the user"></textarea>
+                    </div>
+
+                    <!-- Submit button -->
+                     <div class="form-group">
+                        <button type="submit" class="btn text-dark update">Add</button>
+                     </div>
+                </div>
+            </form>
+        </div>
+      </main>
+    <!-- /Main Site -->
+
+</body>
+</html>
