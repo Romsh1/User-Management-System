@@ -6,7 +6,8 @@
     <title>CRUD Application</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
-<body>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <body>
     <!-- Header -->
      <header id="header">
         <nav>
@@ -33,6 +34,7 @@
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
+                            <th>ID</th>
                             <th>Lastname</th>
                             <th>Firstname</th>
                             <th>Date of Birth</th>
@@ -48,6 +50,7 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <td>1</td>
                             <td>Chaudhary</td>
                             <td>Romika</td>
                             <td>April 4</td>
@@ -59,6 +62,14 @@
                             <td>437 662 9465</td>
                             <td>romikachaudhari09@gmail.com</td>
                             <td>Hello World!</td>
+                            <td>
+                                <a href="#" class="btn border-shadow update">
+                                    <span class="text-gradient"><i class="fa-solid fa-pen-to-square"></i></span>
+                                </a>
+                                <a href="#" class="btn border-shadow delete">
+                                    <span class="text-gradient"><i class="fa-solid fa-trash"></i></span>
+                                </a>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
