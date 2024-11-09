@@ -1,0 +1,39 @@
+//- Form Handling
+form(action="/" method="POST")
+    table.table
+    thead.thead-dark
+        tr
+        th ID
+        th Lastname
+        th Firstname
+        th Date of Birth
+        th Address 1
+        th Address 2
+        th City
+        th Postal code
+        th Country
+        th Phone number
+        th Email
+        th User notes
+        th Action
+    tbody
+        tr
+        td 1
+        td Chaudhary
+        td Romika
+        td April 4
+        td Lakeshore Rd
+        td Ghorahi
+        td Sarnia
+        td N7V 2T1
+        td Canada
+        td 437 662 9465
+        td romikachaudhari09@gmail.com
+        td Hello World!
+        td
+            a.btn.border-shadow.update(href="#")
+            span.text-gradient
+                i.fa-solid.fa-pen-to-square
+            a.btn.border-shadow.delete(href="#")
+            span.text-gradient
+                i.fa-solid.fa-trash

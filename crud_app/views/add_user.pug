@@ -1,0 +1,16 @@
+//- Include header
+include include/_header
+
+//- Main Site
+main#site-main
+  .container
+    .box-nav.d-flex.justify-between
+      a.border-shadow(href="/add-user")
+        span.text-gradient
+          | New User
+          i.fa-solid.fa-user
+
+          include include/_form
+
+//- Include footer
+include include/_footer
