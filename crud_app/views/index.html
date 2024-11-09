@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Application</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+<body>
+    <!-- Header -->
+     <header id="header">
+        <nav>
+            <div class="container">
+                <div class="text-center">
+                    <a href="/" class="nav-brand text-dark">User Management System</a>
+                </div>
+            </div>
+        </nav>
+     </header>
+     <!-- /Header -->
+
+     <!-- Main Site -->
+      <main id="site-main">
+        <div class="container">
+            <div href="box-nav d-flex-justify-between">
+                <a href="/add-user" class="border-shadow">
+                    <span class="text-gradient">New User <i class="fa-solid fa-user"></i></span>
+                </a>
+            </div>
+
+            <!-- form handling-->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Lastname</th>
+                            <th>Firstname</th>
+                            <th>Date of Birth</th>
+                            <th>Address 1</th>
+                            <th>Address 2</th>
+                            <th>City</th>
+                            <th>Postal code</th>
+                            <th>Country</th>
+                            <th>Phone number</th>
+                            <th>Email</th>
+                            <th>User notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Chaudhary</td>
+                            <td>Romika</td>
+                            <td>April 4</td>
+                            <td>Lakeshore Rd</td>
+                            <td>Ghorahi</td>
+                            <td>Sarnia</td>
+                            <td>N7V 2T1</td>
+                            <td>Canada</td>
+                            <td>437 662 9465</td>
+                            <td>romikachaudhari09@gmail.com</td>
+                            <td>Hello World!</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+      </main>
+    <!-- /Main Site -->
+
+</body>
+</html>

@@ -2,7 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 const bodyparser = require('body-parser');
-// const path = require('path');
+const path = require('path');
 
 const app = express();
 
@@ -25,7 +25,7 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 // app.use('/css/style.css', express.static(path.resolve(__dirname, "assets/css")))
 
 app.get('/',(req, res) => {
-    res.send("Crud Application");
+    res.render('index');
 })
 
 app.listen(PORT, () => {
