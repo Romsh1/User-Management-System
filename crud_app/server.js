@@ -5,6 +5,9 @@ const bodyparser = require('body-parser');
 const path = require('path');
 
 const connectDB = require('./server/database/connection');
+// const methodOverride = require('method-override');
+// app.use(methodOverride('_method')); // This will override POST requests with the method specified in the '_method' field
+
 
 const app = express();
 
