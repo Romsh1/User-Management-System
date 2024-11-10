@@ -15,7 +15,7 @@ tbody
       td #{user.email}
       td #{user.userNotes}
       td
-        a.btn.border-shadow.update(href="/update-user")
+        a.btn.border-shadow.update(href="/update-user?id=" + user._id)
           span.text-gradient 
             i.fa-solid.fa-pen-to-square
 
@@ -39,7 +39,7 @@ tbody
 //-     <td><%= userSchema[i].email %></td>
 //-     <td><%= userSchema[i].userNotes %></td>
 //-     <td>
-//-         <a href="/update-user" class="btn border-shadow update">
+//-         <a href="/update-user?id=<%=users[i]._id%>" class = "btn border-shadow update">
 //-             <span class="text-gradient"><i class="fa-solid fa-pen-to-square"></i></span>
 //-         </a>
 //-         //- <a href="#" class="btn border-shadow delete">

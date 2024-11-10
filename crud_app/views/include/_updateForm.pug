@@ -3,66 +3,66 @@ form#update_user(method="POST")
   .new_user
     //- ID (Hidden Field)
     .form-group
-      input(type="hidden" name="id" value="")
+      input(type="hidden" name="id" value=user._id)
 
     //- Lastname
     .form-group
       label.text-light(for="lastname") Lastname
-      input#lastname(type="text" name="lastname" placeholder="Enter Lastname")
+      input#lastname(type="text" name="lastname" value=user.lastname placeholder="Enter Lastname")
 
     //- Firstname
     .form-group
       label.text-light(for="firstname") Firstname
-      input#firstname(type="text" name="firstname" placeholder="Enter Firstname")
+      input#firstname(type="text" name="firstname" value=user.firstname placeholder="Enter Firstname")
 
     //- Date of Birth
     .form-group
       label.text-light(for="dateOfBirth") Date of Birth
-      input#dateOfBirth(type="date" name="dateOfBirth")
+      input#dateOfBirth(type="date" name="dateOfBirth" value=user.dateOfBirth)
 
     //- Address 1
     .form-group
       label.text-light(for="address1") Address 1
-      input#address1(type="text" name="address1" placeholder="Enter Address Line 1")
+      input#address1(type="text" name="address1" value=user.address1 placeholder="Enter Address Line 1")
 
     //- Address 2
     .form-group
       label.text-light(for="address2") Address 2
-      input#address2(type="text" name="address2" placeholder="Enter Address Line 2")
+      input#address2(type="text" name="address2" value=user.address2 placeholder="Enter Address Line 2")
 
     //- City
     .form-group
       label.text-light(for="city") City
-      input#city(type="text" name="city" placeholder="Enter City")
+      input#city(type="text" name="city" value=user.city placeholder="Enter City")
 
     //- Postal Code
     .form-group
       label.text-light(for="postalCode") Postal Code
-      input#postalCode(type="text" name="postalCode" placeholder="Enter Postal Code")
+      input#postalCode(type="text" name="postalCode" value=user.postalCode placeholder="Enter Postal Code")
 
     //- Country
     .form-group
       label.text-light(for="country") Country
-      input#country(type="text" name="country" placeholder="Enter Country")
+      input#country(type="text" name="country" value=user.country placeholder="Enter Country")
 
     //- Phone Number
     .form-group
       label.text-light(for="phoneNumber") Phone Number
-      input#phoneNumber(type="tel" name="phoneNumber" placeholder="Enter Phone Number")
+      input#phoneNumber(type="tel" name="phoneNumber" value=user.phoneNumber placeholder="Enter Phone Number")
 
     //- Email
     .form-group
       label.text-light(for="email") Email
-      input#email(type="email" name="email" placeholder="Enter Email")
+      input#email(type="email" name="email" value=user.email placeholder="Enter Email")
 
     //- User Notes
     .form-group
       label.text-light(for="userNotes") User Notes
-      textarea#userNotes(name="userNotes" placeholder="Enter any notes about the user")
+      textarea#userNotes(name="userNotes" placeholder="Enter any notes about the user")= user.userNotes
 
     //- Edit Button
     .form-group
-      button.btn.text-dark.update(type="submit") Edit
+      button.btn.text-dark.update(type="submit") Save
 
     //- Delete Button
     .form-group
