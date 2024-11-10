@@ -18,21 +18,40 @@ exports.add_user = (req,res) => {
 
 exports.update_user = (req, res) => {
     axios.get('http://localhost:3000/api/users', { params: { id: req.query.id } })
-        .then(function(userData){
+        .then(function (userData) {
             const user = userData.data;
 
-            //Formatting the dateOfBirth to 'YYYY-MM-DD'
-            const formattedDob = new Date(user.dateOfBirth).toISOString().split('T')[0];
+            //Formatting dateOfBirth to 'YYYY-MM-DD' directly using a custom function
+            const formattedDob = formatDate(user.dateOfBirth);
 
             //Rendering the update_user page by passing the formatted dateOfBirth
-            res.render("update_user", { 
-                user: { 
-                    ...user, 
-                    dateOfBirth: formattedDob 
-                } 
+            res.render("update_user", {
+                user: {
+                    ...user,
+                    dateOfBirth: formattedDob
+                }
             });
         })
         .catch(err => {
             res.send(err);
         });
+}
+
+//Helper function to format date to 'YYYY-MM-DD'
+function formatDate(dateString) {
+    if (!dateString) return ''; 
+
+    //Creating a Date object from the input dateString
+    const date = new Date(dateString);
+    
+    //Ensuring the date is valid
+    if (isNaN(date)) return ''; 
+
+    //Extracting year, month, and day using Date methods
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0'); 
+    const day = String(date.getDate()).padStart(2, '0'); 
+
+    //Returning the formatted string 'YYYY-MM-DD'
+    return `${year}-${month}-${day}`;
 }

@@ -1,4 +1,3 @@
-//- Form Handling
 form(action="/api/users" method="POST" id="add_user")
   .new_user
     //- ID (Hidden Field)
@@ -8,22 +7,22 @@ form(action="/api/users" method="POST" id="add_user")
     //- Lastname
     .form-group
       label.text-light(for="lastname") Lastname
-      input#lastname(type="text" name="lastname" placeholder="Enter Lastname")
+      input#lastname(type="text" name="lastname" placeholder="Enter your Lastname" required minlength="2" pattern="^[A-Za-z\s]+$" title="Only letters and spaces allowed")
 
     //- Firstname
     .form-group
       label.text-light(for="firstname") Firstname
-      input#firstname(type="text" name="firstname" placeholder="Enter Firstname")
+      input#firstname(type="text" name="firstname" placeholder="Enter your Firstname" required minlength="2" pattern="^[A-Za-z\s]+$" title="Only letters and spaces allowed")
 
     //- Date of Birth
     .form-group
       label.text-light(for="dateOfBirth") Date of Birth
-      input#dateOfBirth(type="date" name="dateOfBirth")
+      input#dateOfBirth(type="date" name="dateOfBirth" required)
 
     //- Address 1
     .form-group
       label.text-light(for="address1") Address 1
-      input#address1(type="text" name="address1" placeholder="Enter Address Line 1")
+      input#address1(type="text" name="address1" placeholder="Enter Address Line 1" required minlength="5")
 
     //- Address 2
     .form-group
@@ -33,32 +32,32 @@ form(action="/api/users" method="POST" id="add_user")
     //- City
     .form-group
       label.text-light(for="city") City
-      input#city(type="text" name="city" placeholder="Enter City")
+      input#city(type="text" name="city" placeholder="Enter your City name" required minlength="3" pattern="^[A-Za-z\s]+$" title="Only letters and spaces allowed")
 
     //- Postal Code
     .form-group
       label.text-light(for="postalCode") Postal Code
-      input#postalCode(type="text" name="postalCode" placeholder="Enter Postal Code")
+      input#postalCode(type="text" name="postalCode" placeholder="Enter your Postal Code" required pattern="^[A-Za-z0-9]{5,6}$")
 
     //- Country
     .form-group
       label.text-light(for="country") Country
-      input#country(type="text" name="country" placeholder="Enter Country")
+      input#country(type="text" name="country" placeholder="Enter your Country name" required minlength="2" pattern="^[A-Za-z\s]+$" title="Only letters and spaces allowed")
 
     //- Phone Number
     .form-group
       label.text-light(for="phoneNumber") Phone Number
-      input#phoneNumber(type="tel" name="phoneNumber" placeholder="Enter Phone Number")
+      input#phoneNumber(type="tel" name="phoneNumber" placeholder="Enter your Phone Number" required pattern="^[0-9]{10}$" title="Phone number must be 10 digits without letters")
 
     //- Email
     .form-group
       label.text-light(for="email") Email
-      input#email(type="email" name="email" placeholder="Enter Email")
+      input#email(type="email" name="email" placeholder="Enter your Email" required)
 
     //- User Notes
     .form-group
       label.text-light(for="userNotes") User Notes
-      textarea#userNotes(name="userNotes" placeholder="Enter any notes about the user")
+      textarea#userNotes(name="userNotes" placeholder="Enter any notes about yourself")
 
     //- Submit Button
     .form-group
