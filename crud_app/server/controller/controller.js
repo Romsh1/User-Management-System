@@ -2,7 +2,7 @@ var Userdb = require('../model/model');
 
 //ceating and saving new user
 exports.create = (req,res) => {
-    //validate request
+    //validating request
     if(!req.body) {
         res.status(400).send({message:"Content can not be empty!"});
         return;
@@ -64,7 +64,7 @@ exports.find = (req, res) => {
     }
 }
 
-//Update users by user id
+//Updating users by user id
 exports.update = (req, res) => {
     if(!req.body) {
         return res
