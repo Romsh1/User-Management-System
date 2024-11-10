@@ -1,22 +1,50 @@
-<tr>
-    <td>1</td>
-    <td>Chaudhary</td>
-    <td>Romika</td>
-    <td>April 4</td>
-    <td>Lakeshore Rd</td>
-    <td>Ghorahi</td>
-    <td>Sarnia</td>
-    <td>N7V 2T1</td>
-    <td>Canada</td>
-    <td>437 662 9465</td>
-    <td>romikachaudhari09@gmail.com</td>
-    <td>Hello World!</td>
-    <td>
-        <a href="/update-user" class="btn border-shadow update">
-            <span class="text-gradient"><i class="fa-solid fa-pen-to-square"></i></span>
-        </a>
-        //- <a href="#" class="btn border-shadow delete">
-        //-     <span class="text-gradient"><i class="fa-solid fa-trash"></i></span>
-        //- </a>
-    </td>
-</tr>
+//- Assuming `users` is passed to the Pug template
+tbody
+  each user, index in users
+    tr
+      td #{index + 1}
+      td #{user.lastname}
+      td #{user.firstname}
+      td #{user.dateOfBirth}
+      td #{user.address1}
+      td #{user.address2}
+      td #{user.city}
+      td #{user.postalCode}
+      td #{user.country}
+      td #{user.phoneNumber}
+      td #{user.email}
+      td #{user.userNotes}
+      td
+        a.btn.border-shadow.update(href="/update-user")
+          span.text-gradient 
+            i.fa-solid.fa-pen-to-square
+
+        //- Uncomment if you want to include the delete button
+        //- a.btn.border-shadow.delete(href="/delete-user/#{user._id}")
+        //-   span.text-gradient 
+        //-     i.fa-solid.fa-trash
+
+//- <%for(var i = 0; i < users.length; i++){ %>
+//- <tr>
+//-     <td><%= i + 1 %></td>
+//-     <td><%= userSchema[i].lastname %></td>
+//-     <td><%= userSchema[i].firstname %></td>
+//-     <td><%= userSchema[i].dateOfBirth %></td>
+//-     <td><%= userSchema[i].address1 %></td>
+//-     <td><%= userSchema[i].address2 %></td>
+//-     <td><%= userSchema[i].city %></td>
+//-     <td><%= userSchema[i].postalCode %></td>
+//-     <td><%= userSchema[i].country %></td>
+//-     <td><%= userSchema[i].phoneNumber %></td>
+//-     <td><%= userSchema[i].email %></td>
+//-     <td><%= userSchema[i].userNotes %></td>
+//-     <td>
+//-         <a href="/update-user" class="btn border-shadow update">
+//-             <span class="text-gradient"><i class="fa-solid fa-pen-to-square"></i></span>
+//-         </a>
+//-         //- <a href="#" class="btn border-shadow delete">
+//-         //-     <span class="text-gradient"><i class="fa-solid fa-trash"></i></span>
+//-         //- </a>
+//-     </td>
+//- </tr>
+//- <% } %>
