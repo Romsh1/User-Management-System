@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './components/Login';
 import AddUser from './pages/AddUser';
 import UpdateUser from './pages/UpdateUser';
 import DisplayUsers from './pages/DisplayUsers';
@@ -8,9 +9,10 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<DisplayUsers />} />
+        <Route path="/" element={<Login />} />
         <Route path="/add" element={<AddUser />} />
         <Route path="/update/:id" element={<UpdateUser />} />
+        <Route path="/display" element={<DisplayUsers />} />
       </Routes>
     </Router>
   );
