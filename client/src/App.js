@@ -1,4 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AddUser from './pages/AddUser';
+import UpdateUser from './pages/UpdateUser';
+import DisplayUsers from './pages/DisplayUsers';
+
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<DisplayUsers />} />
+        <Route path="/add" element={<AddUser />} />
+        <Route path="/update/:id" element={<UpdateUser />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;
+
+
+
+
+
+/*import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -22,4 +46,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/
